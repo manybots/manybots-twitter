@@ -1,2 +1,2 @@
-ManybotsInstagram::Engine.routes.draw do
+ManybotsTwitter::Engine.routes.draw do
 end

@@ -1,4 +1,4 @@
-module ManybotsInstagram
+module ManybotsTwitter
   module ApplicationHelper
   end
 end

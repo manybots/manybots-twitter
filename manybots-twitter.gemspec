@@ -6,7 +6,7 @@ require "manybots-twitter/version"
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "manybots-twitter"
-  s.version     = ManybotsInstagram::VERSION
+  s.version     = ManybotsTwitter::VERSION
   s.authors     = ["TODO: Your name"]
   s.email       = ["TODO: Your email"]
   s.homepage    = "TODO"
