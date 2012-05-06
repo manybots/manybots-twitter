@@ -2,10 +2,10 @@
 
 ManybotsTwitter.setup do |config|
   # Twitter OAuth App Id
-  config.twitter_app_id = '<replace me>'
+  config.twitter_app_id = 'SH9WrOdh4E6Ebu6j963CjA'
   
   # Twitter OAuth App Secret
-  config.twitter_app_secret = '<replace me>'
+  config.twitter_app_secret = '00Xvu6Dw2mf6vHAza4zjEATaWqXBGCJsEqP8U5BNA'
   
   # App nickname
   config.nickname = 'manybots-twitter'

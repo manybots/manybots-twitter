@@ -7,17 +7,18 @@ require "manybots-twitter/version"
 Gem::Specification.new do |s|
   s.name        = "manybots-twitter"
   s.version     = ManybotsTwitter::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of ManybotsTwitter."
-  s.description = "TODO: Description of ManybotsTwitter."
+  s.authors     = ["Niko Roberts"]
+  s.email       = ["niko@manybots.com"]
+  s.homepage    = "https://github.com/manybots/manybots-twitter"
+  s.summary     = "A Twitter observer for all your Twitter activity."
+  s.description = "Import all of your Twitter activity to your local Manybots."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 3.2.3"
   # s.add_dependency "jquery-rails"
+  s.add_dependency "twitter"
 
   s.add_development_dependency "sqlite3"
 end

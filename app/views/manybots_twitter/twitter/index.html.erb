@@ -1,2 +1,33 @@
-<h1>Twitter#index</h1>
-<p>Find me in app/views/manybots_twitter/twitter/index.html.erb</p>
+<div class="clearfix" style="margin-bottom: 20px;">
+  <%= image_tag('manybots-twitter/icon.png', :align => :left, :width => 40, :style=> 'margin-right: 10px;') %>
+  <h2>Twitter Observer</h2>
+</div>
+
+<%- @tweets.each do |tweet| -%>
+  <div class="card">
+    <h4>
+      <%= tweet.payload[:username] || "Twitter user ##{twitter.remote_account_id}" %>
+      <span class="meta">
+        <%= link_to 'Delete', tweet_path(twitter.id), :method => :delete, :confirm => 'Are you sure?', :class => '' %>
+      </span>
+    </h4>
+
+    <%- if @schedules and @schedules.keys.include?("import_manybots_twitter_#{twitter.id}") -%> 
+      
+      <p>Importing tweets from Twitter every 2 hours</p>
+      <p><%= link_to 'Stop importing', toggle_twitter_path(twitter.id), :method => :post, :confirm => 'Sure?' %></p>
+      
+    <%- else -%>
+    
+      <%= form_tag toggle_twitter_path(twitter.id), :method => :post, :class => 'clearfix' do %>    
+        <p class="button save" style="float:left;margin: 0 5px 0 0;">
+          <%= submit_tag 'Start importing', :id => 'submit'%> 
+        </p>
+        <span class="meta" style="line-height: 32px;">and refresh every 2 hours.</span>
+      <%- end -%>
+    <%- end -%>
+    <p></p>
+    
+  </div>
+<%- end -%>
+<p><%= link_to 'Register an Twitter account', new_twitter_path %></p>
