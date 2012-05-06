@@ -49,7 +49,7 @@ class TwitterWorker
   
   def get_recent_media(options={})
     params = {count: 60}
-    results = self.client.user_recent_media params.merge(options)
+    results = self.client.home_timeline params.merge(options)
     @next_max_id = (results.count == 60 ? results.last.id : 0)
     results
   end
