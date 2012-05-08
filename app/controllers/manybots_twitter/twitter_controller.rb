@@ -50,7 +50,7 @@ module ManybotsTwitter
           :description => "Import pictures from Twitter for OauthAccount ##{twitter.id}"
         }
       
-        ManybotsServer.queue.enqueue(ITwitterWorker, twitter.id)
+        ManybotsServer.queue.enqueue(TwitterWorker, twitter.id)
       end
       
       twitter.save
@@ -72,8 +72,6 @@ module ManybotsTwitter
       Twitter.configure do |config|
         config.consumer_key = ManybotsTwitter.consumer_key
         config.consumer_secret = ManybotsTwitter.consumer_secret
-        config.oauth_token = ManybotsTwitter.oauth_token
-        config.oauth_token_secret = ManybotsTwitter.oauth_token_secret
       end
     end
     
