@@ -68,11 +68,12 @@ module ManybotsTwitter
     end
     
   private
-  
     def configure_twitter
       Twitter.configure do |config|
-        config.client_id = ManybotsTwitter.twitter_app_id
-        config.client_secret = ManybotsTwitter.twitter_app_secret
+        config.consumer_key = ManybotsTwitter.consumer_key
+        config.consumer_secret = ManybotsTwitter.consumer_secret
+        config.oauth_token = ManybotsTwitter.oauth_token
+        config.oauth_token_secret = ManybotsTwitter.oauth_token_secret
       end
     end
     

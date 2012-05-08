@@ -1,11 +1,12 @@
 # Configure Manybots Twitter OAuth client
 
 ManybotsTwitter.setup do |config|
-  # Twitter OAuth App Id
-  config.twitter_app_id = '<replace-me>'
   
-  # Twitter OAuth App Secret
-  config.twitter_app_secret = '<replace-me>'
+  # Twitter OAuth details TODO: Replace these
+  config.consumer_key = "YOUR_CONSUMER_KEY"
+  config.consumer_secret = "YOUR_CONSUMER_SECRET"
+  config.oauth_token = "YOUR_OAUTH_TOKEN"
+  config.oauth_token_secret = "YOUR_OAUTH_TOKEN_SECRET"
   
   # App nickname
   config.nickname = 'manybots-twitter'
