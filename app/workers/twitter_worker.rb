@@ -17,8 +17,8 @@ class TwitterWorker
   
   def load_twitter_client
     Twitter.configure do |config|
-      config.client_id = ManybotsTwitter.twitter_app_id
-      config.client_secret = ManybotsTwitter.twitter_app_secret
+      config.consumer_key = ManybotsTwitter.consumer_key
+      config.consumer_secret = ManybotsTwitter.consumer_secret
     end
     Twitter.client(:access_token => @account.token)
   end
